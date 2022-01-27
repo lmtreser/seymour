@@ -13,3 +13,33 @@ The idea of having plants that can talk to us and tell us when they are hungry i
 ## The solution
 
 The project consists of several components. Two metallic pins are inserted in the dry dirt of a flower pot. Since there is a direct relation between humidity and conductivity, we used an Arduino to read conductivity levels at periodic intervals.
+
+![img2](docs/img/img2.jpeg)
+
+Each reading got sent to a bluetooth module. My iPhone would connect via bluetooth to it, receive those readings and interpret them for me. In the end, I got to know if the plant was doing well or not with a simple tap on the screen. Easy, right?
+
+![img3](docs/img/img3.jpeg)
+
+## The problem
+
+Thanks to Lucas’ expertise we completed the hardware implementation quite quickly. Then we found the first showstopper: our bluetooth module was somewhat old and didn’t comply with BLE (low energy Bluetooth) specifications. iOS devices can not connect to Bluetooth devices older than version 4 due to Apple restrictions that aim to improve battery life. Without newer hardware we were unable to move forward!
+
+Luckily the guys from [PatagoniaTec](https://patagoniatec.com/) loaned us a HM-Sensor. This device is bluetooth version 4 compliant and it can relay to a BLE host any data that you can read with the Arduino.
+
+![img4](docs/img/img4.jpeg)
+The HM-Sensor is a BLE module that is capable of sending and receiving information via Serial-over-Bluetooth.
+
+Once that part was fixed, we had to build the iPhone app. Its development was divided in two parts: detecting the device and displaying the state of the plant. The first part was easy because we only had to look for a device with a previously known ID. Since this was a quick and dirty solution we simply hardcoded this value into the app instead of building an online database of plants as any real application would need.
+Displaying the state of the plant relied on experimentation. The measurements were defined in the 0–1023 interval, so we subdivided that interval in segments. Any value below 400 would make our plant say «I’m drowning!» while any value higher that 950 would make it say «I’m thirsty!». Add a few sound files and you’ve got a speaking plant!
+
+## Something extra
+
+The hackaton was almost over and the projects were already on display when Jose Luis had the idea to integrate a recycled pump from an old ink-jet printer to the project. A low humidity level automatically fired up the water pump which would then water the plant. Once a higher humidity level was reached, the pump was automatically stopped. The cycle was complete!
+
+## The future
+
+This project could be greatly improved if we replaced the hardcoded ID value with a real database so that we could identify an indefinitely large number of plants. A base station built with something like a Raspberry Pi could read all information from every plant and upload it to the cloud, allowing anyone to check their state from far away. Push notifications could let us know exactly when each plant needs watering. We could even manually trigger the water pump to make sure that they get an exact number of water droplets!
+Both the iOS and Arduino project code is freely available at [Github](https://github.com/leandrinux/seymour) so feel free to improve on it or let us know your comments.
+
+## The Autor
+
