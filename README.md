@@ -5,5 +5,9 @@ Not being plant people ourselves, we kinda neglected them. Some would get too mu
 
 ## The idea
 
-On February 12, 2016 an Internet of Things hackathon was held in our city by [SUMA Conectivo](https://web.archive.org/web/20160426044837/http://sumaconectivo.org/index.html). Together with Lucas and Jose Luis we decided to find a solution to this problem. Even though many solutions already exist, we did it the same because we enjoyed the challenge and we knew that we could find a nice solution together. The idea was to develop both an Internet of Things (IoT) solution to give plants the ability to tell us when they were thirsty.
+On February 12, 2016 an Internet of Things hackathon was held in our city by [SUMA Conectivo](https://web.archive.org/web/20160426044837/http://sumaconectivo.org/index.html). Together with [Lucas](https://twitter.com/lmtreser) and [Jose Luis](http://www.roboticaeducativa.com/) we decided to find a solution to this problem. Even though many solutions already exist, we did it the same because we enjoyed the challenge and we knew that we could find a nice solution together. The idea was to develop both an Internet of Things (IoT) solution to give plants the ability to tell us when they were thirsty.
 The idea of having plants that can talk to us and tell us when they are hungry inmediately reminded me of the classic Little Shop of Horrors movie, so the project was called Seymour as an homage to the flower shop attendant who took care of Audrey II, a hungry plant with a very special taste for food.
+
+## The solution
+
+The project consists of several components. Two metallic pins are inserted in the dry dirt of a flower pot. Since there is a direct relation between humidity and conductivity, we used an Arduino to read conductivity levels at periodic intervals.
