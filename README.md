@@ -27,7 +27,8 @@ Thanks to Lucas’ expertise we completed the hardware implementation quite quic
 Luckily the guys from [PatagoniaTec](https://patagoniatec.com/) loaned us a HM-Sensor. This device is bluetooth version 4 compliant and it can relay to a BLE host any data that you can read with the Arduino.
 
 ![img4](docs/img/img4.jpeg)
-The HM-Sensor is a BLE module that is capable of sending and receiving information via Serial-over-Bluetooth.
+
+*The HM-Sensor is a BLE module that is capable of sending and receiving information via Serial-over-Bluetooth.*
 
 Once that part was fixed, we had to build the iPhone app. Its development was divided in two parts: detecting the device and displaying the state of the plant. The first part was easy because we only had to look for a device with a previously known ID. Since this was a quick and dirty solution we simply hardcoded this value into the app instead of building an online database of plants as any real application would need.
 Displaying the state of the plant relied on experimentation. The measurements were defined in the 0–1023 interval, so we subdivided that interval in segments. Any value below 400 would make our plant say «I’m drowning!» while any value higher that 950 would make it say «I’m thirsty!». Add a few sound files and you’ve got a speaking plant!
@@ -43,3 +44,8 @@ Both the iOS and Arduino project code is freely available at [Github](https://gi
 
 ## The Autor
 
+Este texto fue redactado por **Leandro Tami.** iOS developer, computer security enthusiast, hopeless gamer.
+
+* [Artículo original en Medium](https://medium.com/lateral-view/making-active-members-of-your-team-out-of-your-office-plants-ac4209fba0a5)
+
+* [Fork en Automatismos Mar del Plata](https://www.automatismos-mdq.com.ar/blog/2016/02/making-active-members-of-your-team-out-of-your-office-plants.html)
