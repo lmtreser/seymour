@@ -1,4 +1,4 @@
-![Seymour Logo](Design/gota120.png)
+![Seymour Logo](../Design/gota120.png)
 # Seymour
 
 Seymour recibe datos de humedad por BLE 4.0 (Bluetooth de baja energía) y los presenta para que sepas cuándo la tierra de tu planta esta demasiado seca y hay que regarla.
