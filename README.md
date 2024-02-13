@@ -20,6 +20,8 @@ Each reading got sent to a bluetooth module. My iPhone would connect via bluetoo
 
 ![img3](docs/img/img3.jpeg)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gbtw1Gu1xI0?si=94-PBsS_7Y87lULe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## The problem
 
 Thanks to Lucas’ expertise we completed the hardware implementation quite quickly. Then we found the first showstopper: our bluetooth module was somewhat old and didn’t comply with BLE (low energy Bluetooth) specifications. iOS devices can not connect to Bluetooth devices older than version 4 due to Apple restrictions that aim to improve battery life. Without newer hardware we were unable to move forward!
@@ -47,5 +49,4 @@ Both the iOS and Arduino project code is freely available at [Github](https://gi
 Este texto fue redactado por **Leandro Tami.** iOS developer, computer security enthusiast, hopeless gamer.
 
 * [Artículo original en Medium](https://medium.com/lateral-view/making-active-members-of-your-team-out-of-your-office-plants-ac4209fba0a5)
-
 * [Fork en Automatismos Mar del Plata](https://www.automatismos-mdq.com.ar/blog/2016/02/making-active-members-of-your-team-out-of-your-office-plants.html)
